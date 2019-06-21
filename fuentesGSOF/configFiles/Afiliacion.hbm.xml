@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN "
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="mx.com.prosa.wsca.beans.AfiliacionObj" schema="SCA" table="CAFILIACION" >
+        <composite-id name="llave" class="mx.com.prosa.wsca.beans.PKAfiliacionObj">
+            <key-property name="afiliacion"     column="AFILIACION"/>
+            <key-property name="cvAfiliacion"   column="CV_AFILIACION"/>
+        </composite-id>
+
+        <property name="dsAfiliacion"           column="DS_AFILIACION" />
+        <property name="cvBanco"                column="CV_BANCO" />
+        <property name="cvCritdef"              column="CV_CRITDEF" />
+        <property name="noDiasCriterio"         column="NO_DIASCRITERIO" />
+        <property name="feCriterio"             column="FE_CRITERIO" />
+        <property name="prComision"             column="PR_COMISION" />
+        <property name="operaUsd"               column="OPERAUSD" />
+        <property name="uultmod"                column="UULTMOD" />
+        <property name="pultmod"                column="PULTMOD" />
+        <property name="fultmod"                column="FULTMOD" type="timestamp"/>
+    </class>
+</hibernate-mapping>
